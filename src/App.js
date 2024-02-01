@@ -16,8 +16,23 @@ function App() {
     content: "Magna irure ullamco Lorem culpa ipsum do non. Velit culpa ut minim dolore pariatur ad velit id magna deserunt cupidatat minim anim voluptate. Reprehenderit adipisicing elit pariatur et laborum anim nostrud dolor et eu in."
   } 
 
+
+  const tasks = [
+    {id: 1, title: 'tit 1'},
+    {id: 2, title: 'tit 2'},
+    {id: 3, title: 'tit 3'},
+  ];
+
   return (
     <div className="App">
+
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>{task.title}</li>
+        ))}
+      </ul>
+
+
       <ComTest />
       
       <div style={{ width: '100%', display: 'block' }}>
